@@ -117,6 +117,6 @@
 	
 </div>
 </body>
-<footer><center></center></footer>
+
 </html>
 

@@ -19,7 +19,7 @@
                                 <select class="form-control" name="status">
                                     <option value= "Pending">Pending</option>
                                     <option value= "Delivered">Delivered</option>
-                                    <option value= "Canceled">Canceled</option>
+                                    <option value= "Canceled">Cansceled</option>
                                 </select>
                             </div>
                         </div>
