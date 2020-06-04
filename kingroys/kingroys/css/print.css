@@ -1,0 +1,34 @@
+@media print {
+    body.modalprinter * {
+        visibility: hidden;
+    }
+
+    body.modalprinter .modal-dialog.focused {
+        position: absolute;
+        padding: 0;
+        margin: 2;
+        left: 1.5;
+        top: 1;
+    }
+
+    body.modalprinter .modal-dialog.focused .modal-content {
+        border-width: 2;
+    }
+
+    body.modalprinter .modal-dialog.focused .modal-content .modal-header .modal-title,
+    body.modalprinter .modal-dialog.focused .modal-content .modal-body,
+    body.modalprinter .modal-dialog.focused .modal-content .modal-body * {
+        visibility: visible;
+        width: 100%;
+    }
+
+    body.modalprinter .modal-dialog.focused .modal-content .modal-header,
+    body.modalprinter .modal-dialog.focused .modal-content .modal-body {
+        padding: 0;
+        width: 100%;
+    }
+
+    body.modalprinter .modal-dialog.focused .modal-content .modal-header .modal-title {
+        margin-bottom: 20px;
+    }
+}

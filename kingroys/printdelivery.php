@@ -1,7 +1,4 @@
 <?php include('header.php'); ?>
-<?php include('navbar.php'); ?>
-
-<?php include('export.php'); ?>
 <body>
 <div class="container" ><div id = "button"> </div>
 
@@ -14,7 +11,6 @@
 			<th>Order Type</th>
 			<th>Amount Due</th>
 			<th>Status</th>
-			<th>Action</th>
 
 		</thead>
 		<tbody>
@@ -32,12 +28,6 @@
 						<td>
 							<b>	<?php echo $row['status']; ?> </b>
 						</td>
-						<td><a href="#details<?php echo $row['purchaseid']; ?>" data-toggle="modal" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span> Details  </a> || <a href="#editstatus<?php echo $row['purchaseid']; ?>" data-toggle="modal" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil"></span> Edit  </a>
-								<?php include('editdelivery_modal.php'); ?>
-							<?php include('delivery_modal.php'); ?></td>
-						
-
-
 					</tr>
 
 					<?php
@@ -56,39 +46,14 @@
 
 
 
-<script>
-	$(document).ready(function() {
-    $('#myTable').DataTable( {
-        dom: 'lBfrtip',
-        buttons: [
-             {
-                extend: 'excelHtml5',
-                exportOptions: {
-                    columns: [ 0, 1, 2,3,4,5 ]
-                }
-            },
-            {
-                extend: 'pdfHtml5',
-                exportOptions: {
-                    columns: [ 0, 1, 2,3,4,5 ]
-                }
-            },
-
-            {
-                extend: 'print',
-                exportOptions: {
-                    columns: [ 0, 1, 2,3,4,5 ]
-                }
-            },
-
-        ]
-    } );
-} );
-
-</script>
-
 </body>
 <footer>
 <? php include ('footer.php');?>
 </footer>
+
+<script type="text/javascript">
+<!--
+window.print();
+//-->
+</script>
 </html>
